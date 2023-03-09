@@ -1,0 +1,21 @@
+init 6
+count main.c
+count lib_loader.h
+count Makefile
+count test.txt
+count wcbuffer.c
+count wcbuffer.h
+show 0
+show 1
+show 2
+show 3
+show 4
+show 5
+delete index 0
+delete index 1
+delete index 2
+delete index 3
+delete index 4
+delete index 5
+destroy
+exit
