@@ -25,7 +25,7 @@ int main(void) {
             total += info.st_size;
         }
     }
-    printf("total %jd\n", total);
+    printf("%jd total\n", total);
     closedir(directory);
     return EXIT_SUCCESS;
 }
