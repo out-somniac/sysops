@@ -62,13 +62,13 @@ int main(int argc, char **argv) {
         return EXIT_FAILURE;
     }
     struct timespec time_start, time_end;
-    clock_gettime(CLOCK_REALTIME, &time_start);
+    clock_gettime(CLOCK_MONOTONIC, &time_start);
 
     if ( !reverse_into(argv[1], argv[2]) ) {
         return EXIT_FAILURE;
     }
     
-    clock_gettime(CLOCK_REALTIME, &time_end);
+    clock_gettime(CLOCK_MONOTONIC, &time_end);
     printf("%d %10f\n", BUFFER_SIZE, (double)(time_end.tv_nsec - time_start.tv_nsec) / 1000000000 );
     return EXIT_SUCCESS;
 }
